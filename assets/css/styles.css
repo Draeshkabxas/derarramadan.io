@@ -453,6 +453,25 @@ header {
 }
 
 
+/*=============== Intro Video ===============*/
+
+.home__video-container {
+    margin-top: 4.5rem;
+}
+
+.video__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.intro__video {
+    width: 90%;
+    border-radius: 1rem;
+}
+
+
 /*=============== ABOUT ===============*/
 
 .about__container {
