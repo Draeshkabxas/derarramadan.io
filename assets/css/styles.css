@@ -180,6 +180,10 @@ body.light-theme {
     color: var(--title-color);
 }
 
+.light-theme .intro__video {
+    border: none;
+}
+
 .light-theme .about__box {
     box-shadow: 0 2px 8px hsla(var(--second-hue), 48%, 8%, .1);
 }
@@ -188,7 +192,8 @@ body.light-theme {
 .light-theme .services__card,
 .light-theme .work__card,
 .light-theme .testimonial__card,
-.light-theme .contact__card {
+.light-theme .contact__card,
+.light-theme .intro__video {
     box-shadow: 0 2px 16px hsla(var(--second-hue), 48%, 8%, .1);
 }
 
@@ -469,6 +474,8 @@ header {
 .intro__video {
     width: 90%;
     border-radius: 1rem;
+    border: 2px solid black;
+    border-color: var(--first-color);
 }
 
 
@@ -1102,7 +1109,7 @@ header {
         height: 400px;
     }
     .home__img {
-        width: 220px;
+        width: 1020px;
     }
     .home__social-link {
         padding: .4rem;
