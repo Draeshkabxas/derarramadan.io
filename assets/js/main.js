@@ -1,3 +1,27 @@
+/*=============== Intro Video Autoplay ===============*/
+function isScrolledIntoView(el) {
+    var rect = el.getBoundingClientRect();
+    var elemTop = rect.top;
+    var elemBottom = rect.bottom;
+
+    // Only completely visible elements return true:
+    var isVisible = (elemTop >= 0) && (elemBottom <= window.innerHeight);
+    // Partially visible elements return true:
+    //isVisible = elemTop < window.innerHeight && elemBottom >= 0;
+    return isVisible;
+}
+
+document.addEventListener('scroll', function() {
+    const video = document.querySelector('video');
+    if (isScrolledIntoView(video)) {
+        video.muted = false;
+        video.play();
+
+    } else {
+        video.pause();
+    }
+});
+
 /*=============== CHANGE BACKGROUND HEADER ===============*/
 function scrollHeader() {
     const header = document.getElementById('header')

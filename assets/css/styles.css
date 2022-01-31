@@ -455,7 +455,7 @@ header {
 
 /*=============== Intro Video ===============*/
 
-.home__video-container {
+#home__video-container {
     margin-top: 4.5rem;
 }
 
