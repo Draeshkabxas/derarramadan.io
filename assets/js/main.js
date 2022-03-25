@@ -158,3 +158,21 @@ const sr = ScrollReveal({
 sr.reveal(`.home__data`)
 sr.reveal(`.home__handle`, { delay: 700 })
 sr.reveal(`.home__social,.home__scroll`, { delay: 900, origin: 'bottom' })
+
+
+/*=============== Copy Store Password Button ===============*/
+
+var timeout;
+function copyEvent(id,buttonId)
+{
+    var str = document.getElementById(id);
+    var button = document.getElementById(buttonId);
+    window.getSelection().selectAllChildren(str);
+    navigator.clipboard.writeText(str.innerText);
+    button.innerText = "Copied";
+    clearTimeout(timeout);
+    timeout = setTimeout(function() {
+      button.innerText = "copy";
+    }, 1000);
+    //document.execCommand("Copy")
+}
