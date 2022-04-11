@@ -155,9 +155,6 @@ const sr = ScrollReveal({
     //    reset: true
 })
 
-sr.reveal(`.home__data`)
-sr.reveal(`.home__handle`, { delay: 700 })
-sr.reveal(`.home__social,.home__scroll`, { delay: 900, origin: 'bottom' })
 
 
 /*=============== Copy Store Password Button ===============*/
@@ -176,3 +173,14 @@ function copyEvent(id,buttonId)
     }, 1000);
     //document.execCommand("Copy")
 }
+
+/*=============== Loading Page ===============*/
+$(window).on('load',function(){
+    $('.loader').fadeOut(1000);
+    $('.header').fadeIn(1000);
+    $('.main').fadeIn(1000);
+    sr.reveal(`.home__data`)
+    sr.reveal(`.home__handle`, { delay: 700 })
+    sr.reveal(`.home__social,.home__scroll`, { delay: 900, origin: 'bottom' })
+    $('.footer').fadeIn(1000);
+})
